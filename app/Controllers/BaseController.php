@@ -35,7 +35,8 @@ class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = [];
+    protected $helpers = ['form', 'Formulario'];
+	protected $dados = [];
 
     /**
      * Constructor.
@@ -44,6 +45,10 @@ class BaseController extends Controller
     {
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
+
+        $this->dados['action'] 	= 'view';
+		$this->dados['data'] 	= null;
+		$this->dados['errors'] 	= null;
 
         // Preload any models, libraries, etc, here.
 

@@ -112,7 +112,7 @@ body::-webkit-scrollbar-thumb {
     filter: grayscale(0%) opacity(1);
     background-color: var(--bg-secondary);
     color: var(--text-hover);
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 .app-link-text {
@@ -139,9 +139,11 @@ body::-webkit-scrollbar-thumb {
         letter-spacing: -.5em;
         opacity: 0
     }
+
     40% {
         opacity: .6
     }
+
     100% {
         opacity: 1
     }
@@ -154,17 +156,21 @@ body::-webkit-scrollbar-thumb {
         margin: 0;
         padding: 0;
     }
+
     .logo {
         display: none;
     }
+
     .app-navbar {
         bottom: 0;
         width: 100vw;
         height: 5rem;
     }
+
     .app-navbar-nav {
         flex-direction: row;
     }
+
     .app-nav-link {
         justify-content: center;
     }
@@ -177,31 +183,37 @@ body::-webkit-scrollbar-thumb {
         font-weight: bold;
         text-transform: uppercase;
         margin-bottom: lrem;
-        text-align: center!important;
+        text-align: center !important;
         color: var(--bg-secondary);
         background: var(--bg-primary-dark);
-        font-size: 2.5rem!important;
+        font-size: 2.5rem !important;
         letter-spacing: 0.3ch;
         width: 100%;
     }
+
     .logo svg {
         transform: rotate(0deg);
         transition: transform var(--transition-speed);
     }
+
     .app-navbar:hover .logo .app-link-text {
         animation: tracking-in-expand .7s cubic-bezier(.215, .61, .355, 1.000) both
     }
+
     .app-navbar:hover .logo svg {
         transform: rotate(-180deg);
     }
+
     .app-navbar {
         top: 0;
         width: 5rem;
         height: 100vh;
     }
+
     .app-navbar:hover {
         width: 16rem;
     }
+
     .app-navbar:hover .app-link-text {
         display: inline;
         margin-left: 1rem;
@@ -248,7 +260,7 @@ body::-webkit-scrollbar-thumb {
     background-color: #6649b8;
     box-shadow: -1rem 0 3rem black;
     transition: .2s;
-    font-family: var(--roboto-mono)!important;
+    font-family: var(--roboto-mono) !important;
 }
 
 .app-card:hover {
@@ -395,7 +407,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .materias-item:hover {
-    background: url('/assets/img/cardBg.gif');
+    background: url('http://localhost/thoth/public/assets/img/cardBg.gif');
     background-position: center;
     background-size: cover;
     letter-spacing: 3px;
@@ -408,9 +420,11 @@ body::-webkit-scrollbar-thumb {
     .section-title {
         text-align: center;
     }
+
     .materias-grid {
         padding: 0rem 3rem 6rem 3rem;
     }
+
     .materias-item {
         padding: 30px 35px;
     }
@@ -468,9 +482,11 @@ body::-webkit-scrollbar-thumb {
         transform: translateZ(400px);
         opacity: 0
     }
+
     40% {
         opacity: .6
     }
+
     100% {
         transform: translateZ(0);
         opacity: 1
@@ -526,7 +542,7 @@ body::-webkit-scrollbar-thumb {
 .error-return {
     text-transform: uppercase;
     font-family: var(--bebas);
-    text-decoration: none!important;
+    text-decoration: none !important;
     letter-spacing: 3px;
     color: #FF5F5F;
     text-shadow: 1px 1px #B92F2F;
@@ -541,18 +557,23 @@ body::-webkit-scrollbar-thumb {
     0% {
         transform: translate(0)
     }
+
     20% {
         transform: translate(-2px, 2px)
     }
+
     40% {
         transform: translate(-2px, -2px)
     }
+
     60% {
         transform: translate(2px, 2px)
     }
+
     80% {
         transform: translate(2px, -2px)
     }
+
     100% {
         transform: translate(0)
     }
@@ -565,6 +586,7 @@ body::-webkit-scrollbar-thumb {
         width: 300px;
         height: 250px;
     }
+
     .error-message {
         text-align: center;
     }
@@ -698,6 +720,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .social-text {
+    color: #333;
     padding: .7rem 0;
     font-size: 1rem;
 }
@@ -715,7 +738,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none!important;
+    text-decoration: none !important;
     color: #333;
     font-size: 1.1rem;
     border-radius: 50%;
@@ -835,6 +858,7 @@ body::-webkit-scrollbar-thumb {
         min-height: 900px;
         height: 100vh;
     }
+
     .app-container:before {
         width: 1500px;
         height: 1500px;
@@ -845,6 +869,7 @@ body::-webkit-scrollbar-thumb {
         top: initial;
         transition: 2s ease-in-out;
     }
+
     .sigin-signup {
         width: 100%;
         left: 50%;
@@ -852,76 +877,95 @@ body::-webkit-scrollbar-thumb {
         transform: translate(-50%, -100%);
         transition: 1s 0.8s ease-in-out;
     }
+
     .panels-container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr 1fr;
     }
+
     .panel {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         padding: 2.5rem 8%;
     }
+
     .panel .form-content {
         padding-right: 15%;
         padding-bottom: 8rem;
         transition: 0.9s 0.8s ease-in-out;
     }
+
     .panel h3 {
         font-size: 1.2rem;
     }
+
     .panel p {
         font-size: 0.7rem;
         padding: 0.5rem 0;
     }
+
     .app-btn.transparent {
         width: 110px;
         height: 35px;
     }
+
     .image {
         width: 200px;
         transition: 0.9s 0.6s ease-in-out;
     }
+
     .left-panel {
         grid-row: 1 / 2;
     }
+
     .right-panel {
         grid-row: 3 / 4;
     }
+
     .right-panel .form-content, .right-panel .image {
         transform: translateY(300px);
     }
+
     .app-container.sign-up-mode:before {
         transform: translate(-50%, 100%);
         bottom: 36%;
         right: initial;
     }
+
     .app-container.sign-up-mode .left-panel .image, .app-container.sign-up-mode .left-panel .form-content {
         transform: translateY(-300px);
     }
+
     .app-container.sign-up-mode .sigin-signup {
         top: 5%;
         transform: translate(-50%, 0);
         left: 50%;
     }
-    @media( max-width: 600px) {
+
+    @media(max-width: 600px) {
         .forms-container form {
             padding: 0 1.5rem;
         }
+
         .image {
             display: none;
         }
+
         .panel .form-content {
             padding: 1rem 1rem;
         }
+
         .app-container:before {
             bottom: 72%;
             left: 50%;
         }
+
         .app-container.sign-up-mode:before {
             bottom: 32%;
             left: 50%;
         }
+
         .app-container.sign-up-mode .form-content {
             padding: 5rem 1rem;
         }
@@ -987,6 +1031,7 @@ body::-webkit-scrollbar-thumb {
     .materias-page-title {
         flex-direction: column;
     }
+
     .pesquisar-div {
         margin-top: 1rem;
     }
@@ -1043,7 +1088,7 @@ body::-webkit-scrollbar-thumb {
 /* ini: Sobre Materia */
 
 .header-sobre-materia {
-    background-image: url('/assets/img/thothBg.jpg');
+    background-image: url('http://localhost/thoth/public/assets/img/thothBg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 350px;
@@ -1116,6 +1161,69 @@ body::-webkit-scrollbar-thumb {
     font-family: var(--roboto-mono);
 }
 
+.user-area {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    font-family: var(--roboto-mono);
+}
+
+.about-card-arch img {
+    width: 20%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.about-card-arch p {
+    font-size: 0.6rem;
+}
+
+.about-card-arch {
+    text-align: center;
+}
+
+.archiviments-area {
+    margin-top: 3rem;
+}
+
+.archiviments-area-medals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.about-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.user-area h3 {
+    color: var(--text-primary);
+}
+
+.user-area p {
+    font-size: 0.8rem;
+}
+
+.about-card-user {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 0;
+    height: 280px;
+    font-family: var(--roboto-mono);
+}
+
+.about-card-user img {
+    width: 40%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: #1e1e24 0 0 30px;
+}
+
 .about-card img {
     width: 20%;
     border-radius: 50%;
@@ -1146,7 +1254,7 @@ body::-webkit-scrollbar-thumb {
 .return-button a {
     color: var(--bg-default);
     background-color: #B92F2F;
-    text-decoration: none!important;
+    text-decoration: none !important;
     border-radius: 15px;
     padding: 15px 4rem;
     font-family: var(--roboto-mono);
@@ -1156,7 +1264,7 @@ body::-webkit-scrollbar-thumb {
 .continue-button a {
     color: var(--text-primary);
     background-color: darkgreen;
-    text-decoration: none!important;
+    text-decoration: none !important;
     border-radius: 15px;
     padding: 15px 4rem;
     font-family: var(--roboto-mono);
@@ -1196,9 +1304,11 @@ body::-webkit-scrollbar-thumb {
     .about-card-area {
         margin: 10px 0;
     }
+
     .continue-button a, .return-button a {
         padding: 15px 2rem;
     }
+
     .tags {
         flex-wrap: wrap;
     }
@@ -1230,6 +1340,7 @@ body::-webkit-scrollbar-thumb {
         transform: translateX(40px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0px);
         opacity: 1;
@@ -1250,19 +1361,33 @@ body::-webkit-scrollbar-thumb {
     color: var(--text-primary);
 }
 
-.next-button {
+.next-button, .begin-button {
     background-color: darkgreen;
-    text-decoration: none!important;
+    text-decoration: none !important;
     border-radius: 15px;
     padding: 15px 4rem;
-    outline: none!important;
+    outline: none !important;
     border: none;
     color: var(--text-primary);
     font-family: var(--roboto-mono);
     transition: all var(--transition-speed-fast);
 }
 
+.next-button:disabled:hover {
+    background-color: rgb(45, 49, 45);
+}
+
+.next-button:disabled {
+    background-color: rgb(45, 49, 45);
+}
+
 .next-button:hover {
+    transform: scale(1.05);
+    background-color: rgb(2, 70, 2);
+    cursor: pointer;
+}
+
+.begin-button:hover {
     transform: scale(1.05);
     background-color: rgb(2, 70, 2);
     cursor: pointer;
@@ -1335,6 +1460,7 @@ body::-webkit-scrollbar-thumb {
     0% {
         transform: translateX(-100%);
     }
+
     100% {
         transform: translateX(0%);
     }
@@ -1344,6 +1470,7 @@ body::-webkit-scrollbar-thumb {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -1373,7 +1500,7 @@ body::-webkit-scrollbar-thumb {
 
 .quiz-box .answers-indicator div.correct {
     background-color: green;
-    background-image: url("/assets/img/correct.png");
+    background-image: url("http://localhost/thoth/public/assets/img/correct.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1381,7 +1508,7 @@ body::-webkit-scrollbar-thumb {
 
 .quiz-box .answers-indicator div.wrong {
     background-color: darkred;
-    background-image: url("/assets/img/wrong.png");
+    background-image: url("http://localhost/thoth/public/assets/img/wrong.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1431,7 +1558,7 @@ body::-webkit-scrollbar-thumb {
 
 .again-btn {
     padding: 10px 30px;
-    outline: none!important;
+    outline: none !important;
     border: none;
     background-color: #8b1717;
     color: var(--text-primary);
@@ -1441,7 +1568,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .again-btn, .return-btn:focus {
-    outline: 0!important;
+    outline: 0 !important;
 }
 
 .again-btn:hover {
@@ -1452,7 +1579,7 @@ body::-webkit-scrollbar-thumb {
 
 .return-btn {
     padding: 10px 30px;
-    outline: none!important;
+    outline: none !important;
     border: none;
     background-color: green;
     color: var(--text-primary);
@@ -1483,8 +1610,21 @@ body::-webkit-scrollbar-thumb {
     .result-box .result-btns {
         margin-bottom: 15px;
     }
+
     .section-title h2 {
         font-size: 1.5rem;
+    }
+
+    .user-area {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-user {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 

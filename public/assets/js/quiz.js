@@ -7,7 +7,7 @@ const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
 
-let questionLimit = quiz.length //Caso queira todas as questões -> quiz.length.
+let questionLimit = 10; //Caso queira todas as questões -> quiz.length.
 let questionCounter = 0;
 let correntQuestion;
 let avaibleQuestions = [];
@@ -26,8 +26,11 @@ function setAvaibleQuestions() {
 
 //set no número da questão, descrição e opções
 function getNewQuestion() {
-    //set numero questão
 
+     //desabilita o botão continuar
+    controlContinueButton(true);
+
+    //set numero questão
     questionNumber.html("Questão " + (questionCounter + 1) + " de " + questionLimit);
     //set na descrição da questão pegando uma questão aleatoria do array
     const questionIndex = avaibleQuestions[Math.floor(Math.random() * avaibleQuestions.length)];
@@ -81,6 +84,7 @@ function getNewQuestion() {
 //pega o resultado da questão atual
 function getResult(element) {
     const id = parseInt(element.id);
+
     //confere se a resposta bate com a resposta armazenada no array da Questão Atual
     if (id === currentQuestion.answer) {
         //seta uma cor verde para a resposta correta
@@ -88,7 +92,9 @@ function getResult(element) {
         //adiciona um indicador de acerto
         updateAnswerIndicator("correct");
         correctAnswers++;
+        controlContinueButton(false);
     } else {
+        controlContinueButton(false);
         //seta uma cor vermelha para a resposta correta
         element.classList.add("wrong");
         //adiciona um indicador de erro
@@ -102,8 +108,14 @@ function getResult(element) {
             }
         }
     }
+    
     attempt++;
     unclickableOptions();
+}
+
+//Habilita e desabilita o botão continuar do questionário
+function controlContinueButton(habilita){
+    document.querySelector('.next-button').disabled = habilita;
 }
 //deixa todas as resposta inclicáveis assim que o usuario selecionar uma opção.
 function unclickableOptions() {
@@ -143,7 +155,6 @@ function quizOver() {
 // pega o resultado salvo
 function quizResult() {
     $(".total-question").html(questionLimit);
-    $(".total-attempt").html(attempt);
     $(".total-correct").html(correctAnswers);
     $(".total-wrong").html(attempt - correctAnswers);
     const percentage = (correctAnswers / questionLimit) * 100;
@@ -186,5 +197,5 @@ function startQuiz() {
 
 window.onload = function () {
     $(".total-question").html(questionLimit);
-    $(".instructions").html(quiz[0].descricao);
+    $(".instructions").html(quiz[0].descricao)
 }

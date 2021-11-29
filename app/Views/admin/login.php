@@ -12,18 +12,22 @@ use App\Lib\Session;
 <div class="app-container">
     <div class="forms-container">
         <div class="sigin-signup">
-            <form action="" class="sign-in-form">
+            <?= form_open("Login/". ($action = 'logar'), 'class="sign-in-form"') ?>
                 <h2 class="title">Login</h2>
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Usuário">
+                    <input type="text" required id="usuario" name="usuario" placeholder="Usuário">
                 </div>
+                <input type="hidden" name="email" id="email" value="">
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="" placeholder="Senha" id="">
+                    <input type="password" required name="senha" placeholder="Senha" id="senha">
                 </div>
                 <input type="submit" value="Logar" class="app-btn solid">
 
+                <?= mensagemSucesso()?>
+                <?= loginError()?>
+
                 <p class="social-text">Ou faça login com as redes sociais</p>
                 <div class="social-media">
                     <a href="#" class="social-icon">
@@ -39,25 +43,28 @@ use App\Lib\Session;
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
-            </form>
+            <?= form_close() ?>
 
-            <form action="" class="sign-up-form">
+            <?= form_open("Login/". ($action = 'new'), 'class="sign-up-form"') ?>
+              
                 <h2 class="title">Criar uma conta</h2>
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Usuário">
+                    <input type="text" required name="usuario" id="usuario" placeholder="Usuário">
                 </div>
                 <div class="input-field">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email">
+                    <input type="email" required name="email" id="email" placeholder="Email">
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="" placeholder="Senha" id="">
+                    <input type="password" required name="senha" id="senha" minlength="8" placeholder="Senha" id="">
                 </div>
                 <input type="submit" value="Registrar-se" class="app-btn solid">
 
-                <p class="social-text">Ou faça login com as redes sociais</p>
+                <?= cadError()?>
+
+                <p class="social-text">Ou crie sua conta com as redes sociais</p>
                 <div class="social-media">
                     <a href="#" class="social-icon">
                         <i class="fab fa-facebook-f"></i>
@@ -72,7 +79,7 @@ use App\Lib\Session;
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
-            </form>
+            <?= form_close() ?>
 
         </div>
     </div>

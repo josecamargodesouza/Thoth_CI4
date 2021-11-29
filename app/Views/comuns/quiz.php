@@ -13,7 +13,7 @@
             <h3>Instrução:</h3>
             <p class="instructions"></p>
             <p>Número total de questões: <span class="total-question"></span></p>
-            <button type="button" class="next-button" onclick="startQuiz()">Começar</button>
+            <button type="button" class="begin-button" onclick="startQuiz()">Começar</button>
         </div>
         <div class="quiz-box custom-box hide">
 
@@ -33,10 +33,6 @@
                 <tr>
                     <td>Total de Questões</td>
                     <td><span class="total-question"></span></td>
-                </tr>
-                <tr>
-                    <td>Tentativas</td>
-                    <td><span class="total-attempt"></span></td>
                 </tr>
                 <tr>
                     <td>Corretas</td>

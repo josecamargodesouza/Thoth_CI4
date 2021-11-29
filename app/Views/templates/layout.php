@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
 
     <link rel="stylesheet" href="<?= SITEURL ?>public/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="<?= SITEURL ?>public/assets/css/style.css"> <!-- customizado -->
-    <script src="https://kit.fontawesome.com/243351fe15.js" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="<?= SITEURL ?>public/assets/css/style.css?v1.0"> <!-- customizado -->
+    <script src="https://kit.fontawesome.com/243351fe15.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <link rel="shortcut icon" href="<?= SITEURL ?>public/assets/img/thoth.png" type="image/x-icon">
@@ -19,11 +19,11 @@
 </head>
 
 <body>
-
+    <?php $session = session();?>
     <nav class="app-navbar">
         <ul class="app-navbar-nav">
             <li class="logo">
-                <a href="<?=SITEURL?>public/Home/index" class="app-nav-link">             
+                <a href="<?= SITEURL ?>public/Home/index" class="app-nav-link">
                     <span class="app-link-text">THOTH</span>
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-double-right" class="svg-inline--fa fa-angle-double-right fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
@@ -31,7 +31,7 @@
                 </a>
             </li>
             <li class="app-nav-item">
-                <a href="<?=SITEURL?>public/Home/index" class="app-nav-link">
+                <a href="<?= SITEURL ?>public/Home/index" class="app-nav-link">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="svg-inline--fa fa-home fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                         <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
                     </svg>
@@ -39,7 +39,7 @@
                 </a>
             </li>
             <li class="app-nav-item">
-                <a href="<?=SITEURL?>public/Home/materias" class="app-nav-link">
+                <a href="<?= SITEURL ?>public/Home/materias" class="app-nav-link">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book-open" class="svg-inline--fa fa-book-open fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                         <path fill="currentColor" d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z"></path>
                     </svg>
@@ -48,12 +48,12 @@
                 </a>
             </li>
             <li class="app-nav-item">
-                <a href="<?=SITEURL?>public/Home/login" class="app-nav-link">
+                <a href="<?= $session->get('userLogado') == null ? SITEURL.'public/Home/login' : SITEURL.'public/Usuario'  ?>" class="app-nav-link">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path>
                     </svg>
 
-                    <span class="app-link-text">Perfil</span>
+                    <span class="app-link-text"><?= $session->get('userLogado') == null ? 'Login/Cadastro' : 'Perfil' ?></span>
                 </a>
             </li>
             <li class="app-nav-item">
@@ -68,13 +68,18 @@
         </ul>
     </nav>
 
-    <main class="container">
-        <section>
-            <?= $this->renderSection('conteudo') ?>
-        </section>
-    </main>
+    <?= $this->renderSection('conteudo') ?>
+
+
 
     <!-- loader -->
+    <script type="text/javascript">
+        var ErrorSession    = '<?= session()->msgError ?>';
+        var SuccesSession   = '<?= session()->msgSuccess ?>';
+        var LoginError      = '<?= session()->msgLoginError ?>';
+        var CadError        = '<?= session()->msgCadError ?>';
+    </script>
+
     <script src="<?= SITEURL ?>public/assets/js/jquery-3.2.1.min.js"></script>
     <script src="<?= SITEURL ?>public/assets/js/popper.min.js"></script>
     <script src="<?= SITEURL ?>public/assets/js/bootstrap.min.js"></script>
