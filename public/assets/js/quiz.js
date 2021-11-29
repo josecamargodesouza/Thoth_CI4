@@ -7,7 +7,7 @@ const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
 
-let questionLimit = 10; //Caso queira todas as questões -> quiz.length.
+let questionLimit = 4; //Caso queira todas as questões -> quiz.length.
 let questionCounter = 0;
 let correntQuestion;
 let avaibleQuestions = [];
@@ -18,7 +18,7 @@ let attempt = 0;
 
 // armazena a quantidade de questões no array AvaibleQuestions
 function setAvaibleQuestions() {
-    const totalQuestion = questionLimit;
+    const totalQuestion = quiz.length;
     for (let i = 0; i < totalQuestion; i++) {
         avaibleQuestions.push(quiz[i]);
     }
