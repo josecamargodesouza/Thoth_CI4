@@ -191,7 +191,7 @@ function startQuiz() {
     setAvaibleQuestions();
     //depois é chamado a questão
     getNewQuestion();
-    //criar os indadores das respostas
+    //criar os indicadores das respostas
     answersIndicator();
 }
 
